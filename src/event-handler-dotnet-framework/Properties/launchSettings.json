@@ -1,0 +1,10 @@
+﻿{
+  "profiles": {
+    "event_handler_dotnet_framework": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}

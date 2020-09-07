@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30309.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "event-handler-generic", "src\event-handler-generic\event-handler-generic.csproj", "{8910EB3F-DC0C-431F-B768-828907796C78}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "event-handler-dotnet-framework", "src\event-handler-dotnet-framework\event-handler-dotnet-framework.csproj", "{5FD3F35B-0D19-44B2-81B2-91C945E9F60B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8910EB3F-DC0C-431F-B768-828907796C78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8910EB3F-DC0C-431F-B768-828907796C78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8910EB3F-DC0C-431F-B768-828907796C78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8910EB3F-DC0C-431F-B768-828907796C78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FD3F35B-0D19-44B2-81B2-91C945E9F60B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FD3F35B-0D19-44B2-81B2-91C945E9F60B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FD3F35B-0D19-44B2-81B2-91C945E9F60B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FD3F35B-0D19-44B2-81B2-91C945E9F60B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5850CFB8-38BD-4F9A-A881-A3C69BBB89E0}
+	EndGlobalSection
+EndGlobal
