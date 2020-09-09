@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <UserSecretsId>dotnet-event_handler_dotnet_framework-1819E9E7-453B-40D5-B5B0-4150C16174DF</UserSecretsId>
-    <RootNamespace>event_handler_dotnet_framework</RootNamespace>
+    <UserSecretsId>dotnet-event_handler-26451513-A9E3-4C8A-AFDD-B62F7995BAC1</UserSecretsId>
+    <RootNamespace>event_handler</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

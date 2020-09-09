@@ -1,6 +1,6 @@
 ﻿{
   "profiles": {
-    "event_handler_dotnet_framework": {
+    "event_handler": {
       "commandName": "Project",
       "environmentVariables": {
         "DOTNET_ENVIRONMENT": "Development"
