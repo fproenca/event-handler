@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace event_handler.Domain.Model
+namespace event_handler.Domain.Model.UserCases
 {
     public interface IUserCase<T, in I, out O>
     {

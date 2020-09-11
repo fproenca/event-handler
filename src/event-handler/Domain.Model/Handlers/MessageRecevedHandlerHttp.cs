@@ -1,12 +1,12 @@
 ﻿using event_handler.CrossCutting;
-using event_handler.Events;
+using event_handler.Domain.Model.Events;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace event_handler.Handlers
+namespace event_handler.Domain.Model.Handlers
 {
     public class MessageRecevedHandlerHttp : IEventHandler<MessageReceived>
     {

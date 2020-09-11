@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using event_handler.CrossCutting;
-using event_handler.Events;
-using event_handler.Handlers;
+using event_handler.Domain.Model;
+using event_handler.Domain.Model.Events;
+using event_handler.Domain.Model.Handlers;
+using event_handler.Domain.Model.UserCases;
 using event_handler.Stubs;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -32,6 +34,9 @@ namespace event_handler
                     // Add Gateways
                     services.AddTransient<IConsumeKafkaGateway, ConsumeKafkaGatewayStub>();
                     services.AddTransient<ISendMessageHttpGateway, SendMessageHttpGateway>();
+
+                    // Add User Cases
+                    services.AddTransient<IUserCase<SendMessageUserCase, string, Task>, SendMessageUserCase>();
 
                     // Configure Services RaiseEvents
                     var serviceProvider = services.BuildServiceProvider();

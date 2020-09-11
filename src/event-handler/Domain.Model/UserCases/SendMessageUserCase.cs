@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace event_handler.Domain.Model
+namespace event_handler.Domain.Model.UserCases
 {
     public class SendMessageUserCase : IUserCase<SendMessageUserCase, string, Task>
     {

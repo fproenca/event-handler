@@ -1,9 +1,9 @@
-﻿using event_handler.Domain.Model;
+﻿using event_handler.Domain.Model.DTO;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace event_handler.Events
+namespace event_handler.Domain.Model.Events
 {
     public class MessageReceived : IEvent
     {

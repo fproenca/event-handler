@@ -1,4 +1,4 @@
-﻿using event_handler.Domain.Model;
+﻿using event_handler.Domain.Model.DTO;
 using System;
 using System.Collections.Generic;
 using System.Text;

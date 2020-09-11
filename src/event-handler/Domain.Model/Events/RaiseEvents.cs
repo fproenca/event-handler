@@ -1,11 +1,11 @@
-﻿using event_handler.Handlers;
+﻿using event_handler.Domain.Model.Handlers;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace event_handler.Events
+namespace event_handler.Domain.Model.Events
 {
     public static class RaiseEvents
     {

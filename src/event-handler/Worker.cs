@@ -3,10 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using event_handler.Events;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using event_handler.Handlers;
 using event_handler.CrossCutting;
 
 namespace event_handler

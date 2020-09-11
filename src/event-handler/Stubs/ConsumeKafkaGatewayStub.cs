@@ -1,6 +1,7 @@
 ﻿using event_handler.CrossCutting;
 using event_handler.Domain.Model;
-using event_handler.Events;
+using event_handler.Domain.Model.DTO;
+using event_handler.Domain.Model.Events;
 using System;
 using System.Collections.Generic;
 using System.Text;

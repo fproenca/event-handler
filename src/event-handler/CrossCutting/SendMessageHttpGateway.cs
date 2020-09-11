@@ -1,4 +1,4 @@
-﻿using event_handler.Domain.Model;
+﻿using event_handler.Domain.Model.DTO;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
