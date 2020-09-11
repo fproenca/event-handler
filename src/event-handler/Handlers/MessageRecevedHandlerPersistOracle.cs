@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace event_handler.Handlers
 {
-    public class MessageRecevedHandlerPersistOracle : IEventHandler<MessageReceved>
+    public class MessageRecevedHandlerPersistOracle : IEventHandler<MessageReceived>
     {
         private readonly ILogger<MessageRecevedHandlerPersistOracle> _logger;
 
@@ -16,14 +16,10 @@ namespace event_handler.Handlers
             _logger = logger;
         }
 
-        public void Handler(MessageReceved args)
-        {
-            _logger.LogInformation($"Persist Oracle, Event Occurred: {args.DateOccurred}");
-        }
 
-        public async Task HandlerAsync(MessageReceved args)
+        public async Task HandlerAsync(MessageReceived args)
         {
-            Task.Run(() => _logger.LogInformation($"Send SMS, Event Occurred: {args.DateOccurred}"));
+            Task.Run(() => _logger.LogInformation($"Send Oracle, Event Occurred: {args.DateOccurred}"));
         }
     }
 }

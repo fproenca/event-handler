@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace event_handler.Handlers
 {
-    public class MessageRecevedHandlerSMS : IEventHandler<MessageReceved>
+    public class MessageRecevedHandlerSMS : IEventHandler<MessageReceived>
     {
         private readonly ILogger<MessageRecevedHandlerSMS> _logger;
 
@@ -16,12 +16,7 @@ namespace event_handler.Handlers
             _logger = logger;
         }
 
-        public void Handler(MessageReceved args)
-        {
-            _logger.LogInformation($"Send SMS, Event Occurred: {args.DateOccurred}");
-        }
-
-        public async Task HandlerAsync(MessageReceved args)
+        public async Task HandlerAsync(MessageReceived args)
         {
             Task.Run(() => _logger.LogInformation($"Send SMS, Event Occurred: {args.DateOccurred}"));
         }

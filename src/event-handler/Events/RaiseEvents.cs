@@ -11,18 +11,11 @@ namespace event_handler.Events
     {
         public static IServiceProvider Services { get; set; }
 
-        public static void Raise<T>(T args) where T : IEvent
-        {
-            if (Services != null)
-                foreach (var handler in Services.GetServices(typeof(IEventHandler<T>)))
-                    ((IEventHandler<T>)handler).Handler(args);
-        }
-
         public static async Task RaiseAsync<T>(T args) where T : IEvent
         {
             if (Services != null)
                 foreach (var handler in Services.GetServices(typeof(IEventHandler<T>)))
-                    await ((IEventHandler<T>)handler).HandlerAsync(args);
+                    ((IEventHandler<T>)handler).HandlerAsync(args);
         }
     }
 }

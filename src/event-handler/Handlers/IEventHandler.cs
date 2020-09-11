@@ -9,7 +9,5 @@ namespace event_handler.Handlers
     public interface IEventHandler<E> where E : IEvent
     {
         Task HandlerAsync(E args);
-
-        void Handler(E args);
     }
 }

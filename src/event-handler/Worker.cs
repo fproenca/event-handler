@@ -7,29 +7,24 @@ using event_handler.Events;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using event_handler.Handlers;
+using event_handler.CrossCutting;
 
 namespace event_handler
 {
     public class Worker : BackgroundService
     {
         private readonly ILogger<Worker> _logger;
+        private readonly IConsumeKafkaGateway _consumeKafkaGateway;
 
-        public Worker(ILogger<Worker> logger)
+        public Worker(ILogger<Worker> logger, IConsumeKafkaGateway consumeKafkaGateway)
         {
             _logger = logger;
+            _consumeKafkaGateway = consumeKafkaGateway;
         }
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
-            while (!stoppingToken.IsCancellationRequested)
-            {
-                // There are three ways to use it
-                RaiseEvents.RaiseAsync(new MessageReceved());
-                await RaiseEvents.RaiseAsync(new MessageReceved());
-                RaiseEvents.Raise(new MessageReceved());
-
-                await Task.Delay(5000, stoppingToken);
-            }
+            await _consumeKafkaGateway.ConsumeAsync(stoppingToken);
         }
     }
 }
